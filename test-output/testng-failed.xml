@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testpack.OverViewTest">
+      <class name="utility.GridTest">
         <methods>
-          <include name="toGetSummaryinfo"/>
-          <include name="toFinishShopping"/>
-          <include name="tearOut"/>
-          <include name="setup"/>
-          <include name="startUp"/>
+          <include name="toGetGrid"/>
         </methods>
-      </class> <!-- testpack.OverViewTest -->
+      </class> <!-- utility.GridTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
