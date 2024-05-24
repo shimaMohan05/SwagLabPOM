@@ -1,0 +1,14 @@
+pagepack\LoginPage.class
+pagepack\OverviewPage.class
+testpack\BaseClass.class
+utility\PropertiesClass.class
+utility\UtilityClass.class
+testpack\CartTest.class
+testpack\LoginTest.class
+utility\DataProviderTest.class
+pagepack\InventoryPage.class
+pagepack\CheckOutPage.class
+testpack\OverViewTest.class
+pagepack\CartPage.class
+testpack\InventoryTest.class
+testpack\CheckOutTest.class

@@ -4,11 +4,14 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -46,10 +49,16 @@ public class BaseClass {
 		
 		
 	}
+	@Parameters("Browser")
 	@BeforeTest
-	public void setup()
+	public void setup(String localBrowser)
+	{ if(localBrowser.contains("chrome"))
 	{
-		driver=new ChromeDriver();
+		driver=new ChromeDriver();}
+	else if(localBrowser.contains("edge"))
+		{driver=new EdgeDriver();}
+	else
+		{driver=new FirefoxDriver();}
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	 //   pc=new PropertiesClass();
 		driver.get(UtilityClass.getData1("url"));
